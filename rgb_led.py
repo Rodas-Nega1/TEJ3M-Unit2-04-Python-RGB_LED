@@ -2,9 +2,8 @@
 #
 # Created by: Rodas Nega
 # Created on: Nov 2021
-# This program cycles through RGB LED colors and color 
-#   combinations with one second pause intervals in between
-#   each color transition
+# This will display the LED over an interval of 1 second
+#  and increase by 1 second more every on and off cycle 
 
 import time
 import board
@@ -22,21 +21,37 @@ led_b = digitalio.DigitalInOut(board.GP11)
 led_b.direction = digitalio.Direction.OUTPUT
 
 while True: 
+    # red 
     led_r.value = True
+    led_g.value = False
+    led_b.value = False
     time.sleep(1.0)  
+    # green
+    led_r.value = False
     led_g.value = True
-    time.sleep(1.0)        
+    led_b.value = False
+    time.sleep(1.0)
+    # blue
+    led_r.value = False
+    led_g.value = False
     led_b.value = True    
     time.sleep(1.0)
+    # green-red
     led_r.value = True
     led_g.value = True
+    led_b.value = False
     time.sleep(1.0)
+    # green-blue
+    led_r.value = False
     led_g.value = True
     led_b.value = True
     time.sleep(1.0)
-    led_b.value = True
+    # blue-red
     led_r.value = True
+    led_g.value = False
+    led_b.value = True
     time.sleep(1.0)
+    # white
     led_r.value = True
     led_g.value = True
     led_b.value = True
