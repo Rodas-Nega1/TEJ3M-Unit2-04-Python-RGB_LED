@@ -2,8 +2,9 @@
 #
 # Created by: Rodas Nega
 # Created on: Nov 2021
-# This will display the LED over an interval of 1 second
-#  and increase by 1 second more every on and off cycle 
+# This program cycles through RGB LED colors and color 
+#   combinations with one second pause intervals in between
+#   each color transition
 
 import time
 import board
