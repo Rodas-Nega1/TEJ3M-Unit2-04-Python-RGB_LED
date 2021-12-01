@@ -10,14 +10,16 @@ import board
 import digitalio
 
 
-# external LED is connected to pin 13 on the Pico
-led_r = digitalio.DigitalInOut(board.GP13)
+# external LED is connected to pin 11 on the Pico
+led_r = digitalio.DigitalInOut(board.GP11)
 led_r.direction = digitalio.Direction.OUTPUT
 
+# external LED is connected to pin 12 on the Pico
 led_g = digitalio.DigitalInOut(board.GP12)
 led_g.direction = digitalio.Direction.OUTPUT
 
-led_b = digitalio.DigitalInOut(board.GP11)
+# external LED is connected to pin 13 on the Pico
+led_b = digitalio.DigitalInOut(board.GP13)
 led_b.direction = digitalio.Direction.OUTPUT
 
 while True: 
